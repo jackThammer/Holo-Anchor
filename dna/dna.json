@@ -20,39 +20,43 @@
         "PubKey": null
     },
     "Zomes": [
-        {
-            "Name": "sampleZome",
-            "Description": "provide a sample zome",
-            "CodeFile": "sampleZome.js",
-            "RibosomeType": "js",
-            "BridgeFuncs": null,
-            "Config": null,
-            "Entries": [
-                {
-                    "Name": "sampleEntry",
-                    "DataFormat": "json",
-                    "Schema": "",
-                    "SchemaFile": "sampleEntry.json",
-                    "Sharing": "public"
-                }
-            ],
-            "Functions": [
-                {
-                    "Name": "sampleEntryCreate",
-                    "CallingType": "json",
-                    "Exposure": "public"
+      {
+                "Name": "anchors",
+                "Description": "anchors mixin",
+                "RibosomeType": "js",
+                "CodeFile": "anchors.js",
+                "Config": {
+                  "ErrorHandling": "throwErrors"
                 },
-                {
-                    "Name": "sampleEntryRead",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                },
-                {
-                    "Name": "doSampleAction",
-                    "CallingType": "json",
-                    "Exposure": "public"
-                }
-            ]
+                "Entries": [
+                    {
+                        "Name": "anchor",
+                        "DataFormat": "json",
+                        "SchemaFile": "anchor.json",
+                        "Sharing": "public"
+                    },
+                    {
+                        "Name": "anchor_link",
+                        "DataFormat": "links"
+                    }
+                ],
+                "Functions": [
+                    {
+                        "Name": "anchor",
+                        "CallingType": "json",
+                        "Exposure": "public"
+                    },
+                    {
+                        "Name": "exists",
+                        "CallingType": "json",
+                        "Exposure": "public"
+                    },
+                    {
+                        "Name": "getAnchor",
+                        "CallingType": "string",
+                        "Exposure": "public"
+                    }
+                ]
         }
     ]
 }

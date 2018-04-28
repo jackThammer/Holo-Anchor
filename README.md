@@ -19,3 +19,9 @@ Example : exists(anchor{anchorType: "hashtag", anchorText: "hammer"});
 This will get the link of the anchorType
 > Input : anchorType  (string)
 > Example : getAnchor(hashtag);
+
+
+## How to use it ?
+
+Copy the anchor folder from the dna file and paste it in your dna folder.
+Also add a new zome in you dna called anchor as seen in this dna.json file
